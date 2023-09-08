@@ -1,30 +1,28 @@
+/* Importação de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,600&family=Inter:wght@100;200;300;400;500;600&family=Roboto:wght@300;400&display=swap");
+
+/* Reset de estilos */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Estilos globais do corpo do documento */
 body {
-  width: auto;
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
 }
 
 a {
   color: white;
   text-decoration: none;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.logo {
-  color: white;
-  box-shadow: 0 0 10px black;
-  border-radius: 20px;
-  user-select: none;
-  border: 2px solid white;
-}
-
+/* Estilos do cabeçalho */
 .container {
   background-color: #00796b;
-  padding: 12px;
 }
 
 .container-conteudo,
@@ -35,33 +33,22 @@ a {
   padding: 1.4vh;
 }
 
-.container-conteudo ul {
+.logo {
+  color: white;
+  box-shadow: 0 0 10px black;
+  border-radius: 20px;
+  user-select: none;
+  border: 2px solid white;
+  font-family: "Oswald", sans-serif;
+}
+
+.menu ul {
   list-style: none;
   display: flex;
   gap: 2vh;
 }
 
-.container-conteudo li a:hover {
-  color: black;
-  border: 3px solid black;
-  border-radius: 50px;
-  padding: 10px;
-  background-color: red;
-}
-
-.container-conteudo li {
-  margin-right: 4vh;
-  letter-spacing: 2px;
-}
-
-.text {
-  color: white;
-  display: flex;
-  background-color: #008374;
-  box-sizing: border-box;
-  width: 100%;
-}
-
+/* Estilos dos botões */
 .botoes {
   display: flex;
   justify-content: center;
@@ -70,49 +57,35 @@ a {
   margin-top: 5vh;
 }
 
-#start {
+.button {
   background-color: #016156;
+  color: white;
   padding: 14px 30px;
   border-radius: 50px;
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  transition: 0.1;
+  font-weight: bold;
   letter-spacing: 5px;
-  color: white;
+  transition: all 0.1s;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-#start:hover {
-  font-weight: 500;
+.button:hover {
+  font-weight: bolder;
   font-size: 15px;
   letter-spacing: 5px;
   padding: 14px 30px;
   border-radius: 50px;
-  transition: all 0.1;
+  transition: all 0.1s;
   color: #fff;
   background: #016156;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   border: 2px solid rgba(255, 255, 255, 0.83);
 }
 
-#video {
-  padding: 20px;
-  border-radius: 20px;
-  font-size: 25px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-#video:hover {
-  color: white;
-  transition: all 0.2;
-  font-weight: 900;
-}
-
+/* Estilos das imagens e texto */
 .imagem {
   width: 100%;
-  height: 500px;
   display: flex;
   justify-content: space-between;
   padding: 20px; /* Espaçamento da imagem */
@@ -122,12 +95,13 @@ a {
 .imagem p {
   color: rgba(255, 255, 255, 0.9);
   margin: 3vh 2vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", sans-serif;
   width: 100%;
   align-items: center;
   margin-top: 10%;
 }
 
+/* Estilos do conteúdo */
 .content {
   display: flex;
   background-color: #008374;
@@ -143,20 +117,22 @@ a {
   box-sizing: border-box;
 }
 
+/* Estilos responsivos */
 @media (max-width: 1050px) {
-  .text {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 0;
-    margin: 0;
-    width: 360px;
+  #menu {
+    display: none;
   }
-  h1 {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
+
+  .logo {
+    font-size: 14px;
+    margin-top: 12px;
   }
+
+  .imagem {
+    display: flex;
+    flex-direction: column;
+  }
+
   .imagem > img {
     width: 100%;
   }
@@ -165,17 +141,200 @@ a {
     width: 100%;
   }
 
-  body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
   .container {
     width: 100%;
   }
-  .container-conteudo ul {
-    display: none;
+
+  .botoes {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
+
+  .serial,
+  .modbus {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-texto {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+  }
+  .section {
+    margin: 90px;
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+}
+
+/* Estilos para o menu dropdown */
+.menu ul li {
+  background-color: #00796b;
+  color: white;
+  width: 200px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu ul li:hover {
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.menu ul ul {
+  display: none;
+}
+
+.menu ul li:hover > ul {
+  display: block;
+}
+
+.menu ul ul ul {
+  left: -202px;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #016055;
+}
+
+.sonda {
+  font-family: "Bebas Neue", sans-serif;
+  margin: 100px 0 40px 0;
+}
+
+.content-texto {
+  display: flex;
+  align-items: center;
+  margin: 150px 50px 50px 50px;
+  background-color: #016055;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 0 10px black;
+}
+
+/* Estilo para ocultar o modal por padrão */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Estilo para a imagem dentro do modal */
+.modal img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo para o botão de fechar */
+.fecharModal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  padding: 0px 10px;
+}
+
+.fecharModal:hover {
+  background-color: red;
+  color: white;
+}
+
+.button-modal {
+  border-radius: 20px;
+  background-color: #00796b;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  cursor: pointer;
+}
+
+#anteriorInicio,
+#proximoInicio,
+#anteriorSerial,
+#proximoSerial,
+#anteriorModbus,
+#proximoModbus {
+  padding: 12px;
+  margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#videoSerial {
+  display: none;
+  max-width: 500px;
+  position: relative; /* Adicione esta linha para posicionamento relativo */
+  z-index: 2; /* Defina um índice Z maior para o vídeo */
+}
+
+.modal-button {
+  justify-content: center;
+  display: flex;
+  margin: 30px;
+}
+
+.sondatext {
+  margin: 35px;
+  text-align: left;
+}
+
+.sonda {
+  justify-content: center;
+  display: flex;
+}
+
+#abrirModal,
+#abrirModalSerial,
+#abrirModalInicio {
+  border-radius: 20px;
+  background-color: #00796b;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+#abrirModal,
+#abrirModalSerial,
+#abrirModalInicio:hover {
+  border: 2px solid white;
+  background-color: #005046;
+}
+
+.botoes a {
+  border-radius: 20px;
+  background-color: #00796b;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.botoes a:hover {
+  background-color: #004d44;
+  border: 2px solid white;
 }
