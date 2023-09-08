@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="../img/logo.jpg" />
     <link
       href="https://unpkg.com/css.gg@2.0.0/icons/css/play-button-r.css"
       rel="stylesheet"
@@ -17,41 +19,187 @@
   <body>
     <div class="container">
       <div class="container-conteudo">
-        <h1 class="logo">CONDUTIV<span>A</span></h1>
-        <ul>
-          <li><a href="">INICO</a></li>
-          <li><a href="">SOBRE</a></li>
-          <li><a href="">TIME</a></li>
-          <li><a href="">FLUXOGRAMA</a></li>
-        </ul>
+        <h1 class="logo">CONDUTIVA</h1>
+        <nav class="menu" id="menu">
+          <ul>
+            <li><a href="#">INICIO</a></li>
+            <li>
+              FLUXOGRAMA
+              <ul>
+                <li>
+                  PRODUÇÃO
+                  <ul>
+                    <li>
+                      <a href="#sondas">SONDAS</a>
+                      <ul>
+                        <li><a href="#sondaSerial">SERIAL</a></li>
+                        <li><a href="../modbus.html">MODBUS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">CONTROLADORAS</a></li>
+                    <li><a href="#">PAINEIS</a></li>
+                  </ul>
+                </li>
+                <li>COMPRAS</li>
+                <li>MANUTENÇÃO</li>
+                <li>RECEBIMENTO</li>
+                <li>FATURAMENTO</li>
+                <li>EXPEDIÇÃO</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-
-    <div class="content">
-      <h1>Bem-vindo ao Fluxograma-online</h1>
-      <div class="imagem">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          ipsam fugiat, numquam maxime illo fuga alias ducimus, sequi quia
-          dolore corrupti at culpa magnam facere repudiandae omnis rem.
-          Recusandae, non?
-        </p>
-        <img
-          src="https://bootstrapmade.com/demo/templates/Impact/assets/img/hero-img.svg"
-          alt="IMAGEM DE FUNDO"
-        />
-      </div>
-
-      <div class="botoes">
-        <a href="#sobre" id="start">COMEÇAR</a>
-        <a href="#video" id="video"><i class="gg-play-button-r"></i>VIDEO</a>
+    <div class="geral">
+      <div class="content" id="inicio">
+        <h1>Bem-vindo ao Fluxograma-online</h1>
+        <div class="imagem">
+          <p>
+            No Fluxograma-online vamos explorar o processo interno de qualidade
+            e montagem das placas. A qualidade de um produto é fundamental para
+            garantir a satisfação do cliente e a durabilidade do item. No caso
+            das placas, seja para eletrônicos, circuitos integrados ou
+            sinalização, a precisão é essencial. O processo de qualidade começa
+            com a seleção cuidadosa dos materiais. Os componentes utilizados
+            devem atender a rigorosos padrões de desempenho e confiabilidade. A
+            inspeção inicial dos materiais é crucial para identificar qualquer
+            possível defeito antes que eles sejam incorporados às placas. Em
+            seguida, vem a etapa de montagem. Aqui, a precisão é chave. Os
+            componentes são cuidadosamente posicionados na placa de acordo com
+            um layout específico, seguindo as diretrizes de engenharia. A
+            soldagem é um passo crítico, pois qualquer erro pode comprometer a
+            funcionalidade do produto final. Durante todo o processo de
+            montagem, são realizados testes de qualidade rigorosos. Esses testes
+            podem incluir verificações de continuidade elétrica, inspeções
+            visuais e até mesmo testes de funcionamento para garantir que a
+            placa esteja operando conforme as especificações. Além disso, a
+            rastreabilidade é uma parte importante do processo. Cada placa é
+            identificada de forma única, o que permite rastrear sua origem e
+            qualquer problema que possa surgir no futuro. Em resumo, o processo
+            interno de qualidade e montagem das placas é uma combinação de
+            precisão, atenção aos detalhes e testes rigorosos. Garantir a
+            qualidade desde o início é essencial para produzir produtos
+            confiáveis e duradouros que atendam às expectativas dos clientes.
+          </p>
+          <img
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/hero-img.svg"
+            alt="IMAGEM DE FUNDO"
+          />
+        </div>
+        <div class="botoes">
+          <a href="#serial" id="start">Começar</a>
+          <div class="modal-button">
+            <button id="abrirModalInicio">Visualizar Fluxograma</button>
+          </div>
+          <div id="modalInicio" class="modal">
+            <span class="fecharModal" id="fecharModalInicio">&times;</span>
+            <div class="imagem-container">
+              <img src="../img/fluxo1.png" alt="Imagem 1" />
+              <img src="../img/fluxo2.png" alt="Imagem 2" />
+              <img src="../img/fluxo3.png" alt="Imagem 3" />
+            </div>
+            <div class="navegacao">
+              <button id="anteriorInicio">Anterior</button>
+              <button id="proximoInicio">Próximo</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="content-texto">
+      <div class="serial" id="serial">
+        <div class="sondatext">
+          <section>
+            <h1 class="sonda" id="sondaSerial">Sonda Serial</h1>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                tempore optio quis sequi veniam, excepturi dolor enim molestias
+                nesciunt accusantium, eius obcaecati repellat quo perferendis
+                numquam accusamus sapiente ducimus tenetur.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis, deserunt similique animi id deleniti amet libero aut
+                cumque quis ducimus? Cupiditate illo maiores ex praesentium,
+                debitis labore sed quam. Aperiam.
+              </p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+                iure vitae cupiditate maxime odit possimus omnis excepturi
+                blanditiis, officiis quo enim magni, assumenda architecto!
+                Sapiente dolor ea asperiores ipsum totam.
+              </p>
+              <div class="modal-button">
+                <button id="abrirModalSerial">ABRIR FLUXOGRAMA Serial</button>
+              </div>
+              <div id="modalSerial" class="modal">
+                <span class="fecharModal" id="fecharModalSerial">&times;</span>
+                <div class="imagem-container">
+                  <img src="../img/inspeçaovisual.jpg" alt="Imagem 1" />
+                  <img src="../img/inserçaodoscomponentes.jpg" alt="Imagem 2" />
+                </div>
+                <div class="video-container">
+                  <video
+                    id="videoSerial"
+                    src="../img/gravarpic.mp4"
+                    muted
+                    controls
+                  ></video>
+                </div>
 
-    <div class="container-secundario">
-      <div class="about">
-        <h1>SOBRE NÓS</h1>
+                <div class="navegacao">
+                  <button id="anteriorSerial">Anterior</button>
+                  <button id="proximoSerial">Próximo</button>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+      <div class="modbus">
+        <div class="sondatext">
+          <section>
+            <h1 class="sonda">Sonda Modbus</h1>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                tenetur expedita recusandae culpa dolorem aspernatur, ullam
+                doloremque nemo enim excepturi veniam adipisci quae cupiditate.
+                Neque placeat repellat magnam! Id, rem?
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur consequuntur tempore porro ipsa voluptatem atque,
+                beatae alias eum vitae fugiat animi officia? Officia debitis,
+                molestias voluptas totam non expedita quisquam?
+              </p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Facere, excepturi aperiam? Dolorem inventore id ea earum sed
+                facilis, aut qui accusamus vel hic, magnam consequ facilis, aut
+                qui accusamus vel hic, magnam consequuntur adipisci incidunt
+                nemo dolore unde.
+              </p>
+              <div class="modal-button">
+                <button id="abrirModal">Fluxograma Modbus</button>
+              </div>
+              <div id="modal" class="modal">
+                <span class="fecharModal" id="fecharModal">&times;</span>
+                <div class="imagem-containermodal">
+                  <img src="../img/sensor.jpg" alt="Imagem do Modal" />
+                </div>
+                <div class="navegacao">
+                  <button id="anteriorModbus">Anterior</button>
+                  <button id="proximoModbus">Próximo</button>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
       </div>
     </div>
   </body>
+  <script src="../js/index.js"></script>
 </html>
